@@ -15,6 +15,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.web.haina.juhong.entity.UserInfo;
+import com.web.haina.juhong.entity.UserInfo_;
 
 public interface UserInfoRepository extends JpaRepository<UserInfo, Integer>, JpaSpecificationExecutor<UserInfo> {
 
@@ -48,9 +49,7 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Integer>, Jp
 					if (filter == null) {
 						return cb.conjunction();
 					}
-					return cb.and(merge(
-					// eq(cb, root.get(QuartzJob_.jobStatus), filter.getJobStatus())
-					));
+					return cb.and(merge(eq(cb, root.get(UserInfo_.phone), filter.getPhone())));
 				}
 			});
 		}
