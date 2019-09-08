@@ -1,10 +1,15 @@
 package com.web.haina.juhong.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity(name = "integral")
-public class Integral {
-    @Id
+public class Integral implements Serializable{
+
+	private static final long serialVersionUID = 5661036586885335245L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

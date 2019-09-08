@@ -1,10 +1,15 @@
 package com.web.haina.juhong.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity(name = "user_info")
-public class UserInfo {
-    @Id
+public class UserInfo implements Serializable{
+	
+	private static final long serialVersionUID = -5446053221346535013L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

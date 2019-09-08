@@ -1,10 +1,15 @@
 package com.web.haina.juhong.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity(name = "user_task")
-public class UserTask {
-    @Id
+public class UserTask implements Serializable{
+	
+	private static final long serialVersionUID = 6856978004415832616L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

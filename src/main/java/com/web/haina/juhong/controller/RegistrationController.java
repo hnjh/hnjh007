@@ -31,6 +31,8 @@ public class RegistrationController {
 	@ApiOperation(value = "用户注册", notes = "")
 	@PostMapping(value = "/users")
 	public String registrationUser(@ApiParam(name="用户注册信息",value="传入json格式",required=true) @RequestBody UserRegistoryRequest request) {
+		
+		
 		return "success";
 	}
 
